@@ -12,12 +12,16 @@ ENDCLASS.
 
 
 
-CLASS zcl_5454_intro IMPLEMENTATION.
+CLASS ZCL_5454_INTRO IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
 
-    DATA var TYPE string.
+    DATA var TYPE /lrn/s4d430_ind.
+
+    SELECT FROM /LRN/S4D430_IND_CDS_View FIELDS * INTO TABLE @DATA(result).
+
+
 
   ENDMETHOD.
 ENDCLASS.
