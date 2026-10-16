@@ -12,6 +12,9 @@
 @ObjectModel.usageType.dataClass: #MASTER
 define view entity Z5454_R_EMPLOYEE
   as select from z5454employ
+  
+  association [1..1] to Z5454_R_DEPARTMENT as _Department on _Department.Id = $projection.DepartmentId
+  
 {
   key employee_id           as EmployeeId,
       first_name            as FirstName,
@@ -28,5 +31,7 @@ define view entity Z5454_R_EMPLOYEE
       created_at            as CreatedAt,
       local_last_changed_by as LocalLastChangedBy,
       local_last_changed_at as LocalLastChangedAt,
-      last_changed_at       as LastChangedAt
+      last_changed_at       as LastChangedAt,
+      
+      _Department
 }

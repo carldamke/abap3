@@ -22,5 +22,7 @@ define view entity Z5454_C_EMPLOYEE
       CreatedAt,
       LocalLastChangedBy,
       LocalLastChangedAt,
-      LastChangedAt
+      LastChangedAt,
+      
+      _Department
 }

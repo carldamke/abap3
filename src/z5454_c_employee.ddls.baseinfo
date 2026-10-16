@@ -6,9 +6,13 @@
 "Z5454_R_EMPLOYEE"
 ],
 "ASSOCIATED":
-[],
+[
+"Z5454_R_DEPARTMENT"
+],
 "BASE":
-[],
+[
+"Z5454_R_EMPLOYEE"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":
