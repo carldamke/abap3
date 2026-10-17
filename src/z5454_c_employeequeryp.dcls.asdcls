@@ -1,0 +1,8 @@
+@EndUserText.label: 'Employee Query (Access Control)'
+@MappingRole: true
+define role Z5454_C_EMPLOYEEQUERYP {
+    grant select on Z5454_C_EMPLOYEEQUERYP
+        where
+            inheriting conditions from entity Z5454_R_EMPLOYEE;
+                        
+}

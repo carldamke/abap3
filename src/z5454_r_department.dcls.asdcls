@@ -1,0 +1,15 @@
+@EndUserText.label: 'Department (Access Control)'
+@MappingRole: true
+define role Z5454_R_DEPARTMENT {
+    grant select on Z5454_R_DEPARTMENT
+        where (Id) // corresponds with data element of auth field: z5454_department_id = Entity field Id 
+            = aspect pfcg_auth(
+//                Z5454DPMNT, // authorization object
+//                Z5454DPMNT, // authorizaion field bound against data element and check table 
+                /LRN/DPMNT, // we use this auth object because we don't have permissions for our custom one (yet)
+                /LRN/DPMNT,
+//                authorization_field_2,  // not needed in this instance
+                ACTVT = '03' // display / readonly
+              );
+                        
+}

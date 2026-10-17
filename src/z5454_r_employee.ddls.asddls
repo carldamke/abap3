@@ -1,7 +1,9 @@
 //@ABAPCatalog.dataMaintenance: #RESTRICTED
 @AbapCatalog: {
    dataMaintenance: #RESTRICTED,
-   viewEnhancementCategory: [#NONE]
+   viewEnhancementCategory: [#PROJECTION_LIST],
+   extensibility.dataSources: [ 'Employee' ],
+   extensibility.elementSuffix: 'ZEM'
  }
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Employee (Entity)'
@@ -11,7 +13,7 @@
 @ObjectModel.usageType.sizeCategory: #M
 @ObjectModel.usageType.dataClass: #MASTER
 define view entity Z5454_R_EMPLOYEE
-  as select from z5454employ
+  as select from z5454employ as Employee
   
   association [1..1] to Z5454_R_DEPARTMENT as _Department on _Department.Id = $projection.DepartmentId
   

@@ -1,0 +1,19 @@
+@Metadata.layer: #CORE
+annotate view Z5454_C_EMPLOYEEQUERYP with
+  parameters
+    @EndUserText.label: 'Date of evaluation'
+    p_date
+{
+  @EndUserText.label: 'Assistant Full Name'
+  AssistantName;
+  @EndUserText.label: 'Years Affiliated with the Company'
+  CompanyAffiliation;
+  @EndUserText.label: 'Employee Role'
+  EmployeeRole;
+  @EndUserText.label: 'Annual salary converted'
+  AnnualSalaryConverted;
+  @EndUserText.label: 'Monthly Salary'
+  MonthlySalary;
+  @EndUserText.label: 'Monthly Salary converted to USD'
+  MonthlySalaryConverted;
+}
